@@ -1,0 +1,49 @@
+<div class="container" >
+
+	<div class="row">
+		<div class="col-md-12" style="padding-top: 10vh; color: white; margin-bottom: 7vh; text-align: center">
+			<h2 style="display: table;margin: auto;">{{ hola }} Bem-vindo! Por favor, inserir um URL que você gostaria criptografar:</h2>
+			
+		</div>
+		
+	</div>
+
+	
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2" style="padding-top: 10vh">
+			<input  required id="input" class="form-control" style="display: table; margin: auto; " type="text" value="" placeholder="URL a converter">
+			<br>
+			<input  required id="campaingTitle" class="form-control" style="display: table; margin: auto; " type="text" value="" placeholder="Titulo da campanha">
+			<br>
+			<input  required id="buttonTitle" class="form-control" style="display: table; margin: auto; " type="text" value="" placeholder="Titulo do Botao">
+			<br>
+			<input required  id="imgTitle" class="form-control" style="display: table; margin: auto; " type="text" value="" placeholder="Ruta da Imagen a Anexar">
+			<br>
+			
+			<button id="button" class="btn btn-lg btn-primary btn-default" style="display: table; margin: auto; ">1º Gerar URL</button>
+			
+		</div>
+		
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-xs-12" style="display: table; margin: auto">
+			<br>
+			<h3 style="color: white">Este é seu link criptografado:</h3>
+			<br>
+
+			<div class="col-xs-5">
+				<button id="copyButton" class="btn btn-lg btn-primary btn-default" style="display:table; margin-left: auto; margin-top: 3vh" data-clipboard-action="copy" data-clipboard-target="#output">2º Copiar URL</button>
+			</div>
+
+			<div class="col-xs-7" style="padding: 0">
+			<textarea name="" id="output" rows="4" style="width: 100%; text-align: center; display: inline;">
+				
+			</textarea>
+			</div>
+
+			
+		</div>
+	</div>
+			
+</div>

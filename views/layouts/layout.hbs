@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="fb:app_id" content="136529443126360" />
+	<meta property="og:type" content="website" />
+	<!-- <meta property="og:url" content="https://www.spinver.com/jobs/opportunity" /> -->
+	<meta property="og:image" content="{{ title }}" />
+    
+
+
+	<title>{{ title }}</title>
+
+	<link rel="icon" type="image/png" href="/images/favicon.png">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="
+
+    stylesheet">
+
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    {{{ body }}}
+
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.13/clipboard.min.js"></script>
+	
+	<script type="text/javascript" src="/javascripts/url.js"></script>
+
+	<script>
+		var clipboard = new Clipboard('#copyButton');
+
+	</script>
+	
+
+
+	<script>
+				
+		var inputURL = document.getElementById("input");
+		var campaingTitle = document.getElementById("campaingTitle");
+		var buttonTitle = document.getElementById("buttonTitle");
+		var imgTitle = document.getElementById("imgTitle");
+
+		var button =  document.getElementById("button");
+		var outputURL =  document.getElementById("output");
+
+		button.addEventListener("click", function(){
+
+
+			// i have the url coded
+			var codedURL = btoa(inputURL.value); 
+			var codedImg = btoa(imgTitle.value); 
+
+			outputURL.innerHTML = "app.spinver.com?url=" + codedURL + "&campaing_title=" + campaingTitle.value + "&button_title=" + buttonTitle.value + "&img_title=" + codedImg;
+
+			
+		});
+
+	</script>
+</body>
+</html>
