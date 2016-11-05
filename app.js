@@ -17,6 +17,23 @@ app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __di
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+
+
+
+
+app.use(function(req,res,next) {
+  var
+    ua = req.headers['user-agent'];
+ 
+  if (/^(facebookexternalhit)|(Twitterbot)|(Pinterest)/gi.test(ua)) {
+    console.log(ua,' is a bot');
+    router(req,res,next);
+  } else {
+    next();
+  }
+});
+
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -25,6 +42,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+
+
+
+
 app.use(expressSession({secret: 'max', saveUninitialized: false, resave: false}));
 
 app.use('/', routes);

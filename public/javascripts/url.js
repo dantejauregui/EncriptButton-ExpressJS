@@ -48,14 +48,6 @@ document.getElementById("imageInsert").src = imgTitle;
 
 
 
-// OG IMG FB:
-metaImg = $('meta[property="og:image"]')[0];
-metaImg.content = imgTitle;
-
-// OG TITLE FB:
-metaTitle = $('meta[property="og:title"]')[0];
-metaTitle.content = nameTitle;
-
 
 
 

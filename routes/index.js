@@ -1,11 +1,30 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'SPINVER', success: req.session.success, errors: req.session.errors });
-  req.session.errors = null;
+router.get('/', function(req,res) {
+  var
+    img   = 'placeholder2.png';
+     
+  res.render('index', { 
+    img       : img,
+    url       : 'https://bot-social-share.herokuapp.com/',
+    title     : 'Bot Test', 
+    descriptionText : 'This is designed to appeal to bots',
+    imageUrl  : 'https://bot-social-share.herokuapp.com/'+img,
+    
+    title2     : 'SPINVER'
+  });
 });
+ 
+
+
+
+
+/* GET home page. */
+// router.get('/', function(req, res, next) {
+//   res.render('index', { title: 'SPINVER', success: req.session.success, errors: req.session.errors });
+//   req.session.errors = null;
+// });
 
 
 router.get('/generate', function(req, res, next) {
