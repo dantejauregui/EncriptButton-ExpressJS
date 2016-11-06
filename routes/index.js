@@ -2,15 +2,17 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req,res) {
-  var
-    img   = 'placeholder2.png';
+  
+
+
+  var img   = req.query.img_title;
      
   res.render('index', { 
     img       : img,
     url       : 'https://bot-social-share.herokuapp.com/',
     title     : 'Bot Test', 
     descriptionText : 'This is designed to appeal to bots',
-    imageUrl  : 'https://bot-social-share.herokuapp.com/'+img,
+    imageUrl  : 'https://www.spinver.com/images/files/banner/'+img,
     
     title2     : 'SPINVER'
   });

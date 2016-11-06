@@ -37,14 +37,16 @@ document.getElementById("finalButton").innerHTML = buttonTitle;
 
 var imgTitle = getParameterByName('img_title');
 
-if (imgTitle) {
-    imgTitle = atob(imgTitle);
-}
-else{
-    imgTitle = "#"
-}
+// if (imgTitle) {
+//     imgTitle = atob(imgTitle);
+// }
+// else{
+//     imgTitle = "#"
+// }
 
-document.getElementById("imageInsert").src = imgTitle;
+
+//tal vez esto no funciona...verificar luego para eliminar
+document.getElementById("imageInsert").src = "https://www.spinver.com/images/files/banner/" + imgTitle;
 
 
 
