@@ -5,13 +5,15 @@ router.get('/', function(req,res) {
   
 
 
-  var img   = req.query.img_title;
+  var img     = req.query.img_title;
+  var title   = req.query.campaing_title;
+
      
   res.render('index', { 
     img       : img,
-    url       : 'https://bot-social-share.herokuapp.com/',
-    title     : 'Bot Test', 
-    descriptionText : 'This is designed to appeal to bots',
+    url       : '',
+    title     : title, 
+    descriptionText : '',
     imageUrl  : 'https://www.spinver.com/images/files/banner/'+img,
     
     title2     : 'SPINVER'
