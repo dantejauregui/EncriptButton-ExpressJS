@@ -47,28 +47,6 @@
 	
 
 
-	<script>
-				
-		var inputURL = document.getElementById("input");
-		var campaingTitle = document.getElementById("campaingTitle");
-		var buttonTitle = document.getElementById("buttonTitle");
-		var imgTitle = document.getElementById("imgTitle");
-
-		var button =  document.getElementById("button");
-		var outputURL =  document.getElementById("output");
-
-		button.addEventListener("click", function(){
-
-
-			// i have the url coded
-			var codedURL = btoa(inputURL.value); 
-			var codedImg = imgTitle.value; 
-
-			outputURL.innerHTML = "app.spinver.com?url=" + codedURL + "&campaing_title=" + campaingTitle.value + "&button_title=" + buttonTitle.value + "&img_title=" + codedImg;
-
-			
-		});
-
-	</script>
+	
 </body>
 </html>

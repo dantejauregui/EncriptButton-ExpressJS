@@ -27,10 +27,10 @@ finalButton.href = newURL;
 
 
 
+
 var nameTitle = getParameterByName('campaing_title');
 document.getElementById("campaignTitle").innerHTML = nameTitle;
 
-console.log(nameTitle);
 
 var buttonTitle = getParameterByName('button_title');
 document.getElementById("finalButton").innerHTML = buttonTitle;
